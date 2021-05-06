@@ -1,10 +1,19 @@
-<div>
-  <mat-form-field appearance="outline" *ngIf="races">
+<div *ngIf="races">
+  <mat-form-field appearance="fill" >
     <mat-label>Wybierz rasę</mat-label>
     <mat-select >
-      <mat-option *ngFor="let race of races" [value]="race.name">
+      <mat-option *ngFor="let race of races" [value]="race.name" >
         {{race.name}}
       </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Wybierz płeć bohatera</mat-label>
+    <mat-select >
+      <mat-option value="male">Mężczyzna</mat-option>
+      <mat-option value="female">Kobieta</mat-option>
     </mat-select>
   </mat-form-field>
 </div>
