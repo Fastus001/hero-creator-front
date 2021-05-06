@@ -1,0 +1,12 @@
+<div>
+  <mat-form-field appearance="outline" *ngIf="races">
+    <mat-label>Wybierz rasę</mat-label>
+    <mat-select >
+      <mat-option *ngFor="let race of races" [value]="race.name">
+        {{race.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
