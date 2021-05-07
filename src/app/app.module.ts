@@ -8,12 +8,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ShowRaceComponent} from './components/race/show-race/show-race.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RaceComponent
+    RaceComponent,
+    ShowRaceComponent
 
   ],
   imports: [
@@ -23,6 +27,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSliderModule,
     MatSelectModule,
     MatButtonModule,
+    MatCardModule,
+    MatDividerModule,
     FormsModule,
     ReactiveFormsModule
   ],
