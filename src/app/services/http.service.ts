@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Race} from '../domain/Race';
+import {Profession} from '../domain/Profession';
+import {tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +18,10 @@ export class HttpService {
 
   getRacesNames(): Observable<string[]>{
     return this.http.get<string[]>('http://localhost:8080/api/races/names');
+  }
+
+  getProfessionsByLvlAndSex(lvl: number, sex: boolean, race: string): Observable<Profession[]>{
+    return this.http.get<Profession[]>('http://localhost:8080/api/professions/' + lvl + '/' + sex + '/' + race)
+      .pipe(tap(console.log));
   }
 }

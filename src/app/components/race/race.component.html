@@ -1,9 +1,9 @@
 <div *ngIf="races">
   <form [formGroup]="model">
-    <mat-form-field appearance="fill" >
+    <mat-form-field appearance="fill">
       <mat-label>Wybierz rasę</mat-label>
-      <mat-select formControlName="raceForm">
-        <mat-option *ngFor="let race of races" [value]="race.name" >
+      <mat-select formControlName="raceForm" (selectionChange)="onChange($event)">
+        <mat-option *ngFor="let race of races" [value]="race" >
           {{race.name}}
         </mat-option>
       </mat-select>
@@ -12,12 +12,29 @@
     <mat-form-field appearance="fill">
       <mat-label>Wybierz płeć bohatera</mat-label>
       <mat-select formControlName="sex">
-        <mat-option value="male">Mężczyzna</mat-option>
-        <mat-option value="female">Kobieta</mat-option>
+        <mat-option value="true">Mężczyzna</mat-option>
+        <mat-option value="false">Kobieta</mat-option>
       </mat-select>
     </mat-form-field>
-  <button (click)="log()" type="submit">Chose</button>
+
+    <mat-form-field *ngIf="professions" appearance="fill">
+      <mat-label>Wybierz profesję</mat-label>
+      <mat-select >
+        <mat-option *ngFor="let prof of professions" [value]="prof" >
+          {{prof.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </form>
+
+
+
+  <div *ngIf="race">
+    <div *ngFor="let stat of race.stats">
+      <input  type="number" [value]="stat">
+    </div>
+
+  </div>
 
 </div>
 
