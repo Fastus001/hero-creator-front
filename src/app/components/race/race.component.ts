@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../services/http.service';
-import {Race} from '../../domain/Race';
+import {Race} from './race.model';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Profession} from '../../domain/Profession';
 

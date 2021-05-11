@@ -13,8 +13,9 @@
     <mat-divider></mat-divider>
     <mat-card-title>Dostępne umiejętności</mat-card-title>
     <ng-container *ngFor="let skill of race.skills">
-      <p>{{skill.name}}, </p>
+      <p>{{skill.name}} +({{ statNames[skill.statNumber] }}), </p>
     </ng-container>
+    <mat-divider></mat-divider>
     <mat-card-title>Dostępne talenty</mat-card-title>
     <ng-container *ngFor="let talent of race.talents">
       <p>{{talent.name}}, </p>

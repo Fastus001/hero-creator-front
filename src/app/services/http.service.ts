@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Race} from '../domain/Race';
 import {Profession} from '../domain/Profession';
 import {tap} from 'rxjs/operators';
+import {Race} from '../components/race/race.model';
 
 @Injectable({
   providedIn: 'root'

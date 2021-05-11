@@ -1,4 +1,4 @@
-export interface BaseStats{
+export class BaseStat{
   name: string;
   statNumber: number;
   expansion: number;

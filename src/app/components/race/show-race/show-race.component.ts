@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Race} from '../../../domain/Race';
+import {Race} from '../race.model';
 
 @Component({
   selector: 'app-show-race',

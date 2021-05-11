@@ -1,5 +1,5 @@
-import {Skill} from './Skill';
-import {Talent} from './Talent';
+import {Skill} from '../../domain/Skill';
+import {Talent} from '../../domain/Talent';
 
 export interface Race {
   id?: number;
