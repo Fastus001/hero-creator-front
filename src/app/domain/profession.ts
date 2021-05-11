@@ -1,5 +1,5 @@
-import {Skill} from './Skill';
-import {Talent} from './Talent';
+import {Skill} from './skill';
+import {Talent} from './talent';
 
 export interface Profession {
   id?: number;

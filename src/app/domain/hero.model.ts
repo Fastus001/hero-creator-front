@@ -1,15 +1,14 @@
 import {Race} from '../components/race/race.model';
-import {Profession} from './Profession';
-import {Skill} from './Skill';
-import {Talent} from './Talent';
+import {Profession} from './profession';
+import {Skill} from './skill';
+import {Talent} from './talent';
 import {BaseStat} from './base-stat.model';
 
 export class Hero {
-  name: string;
-  race: Race;
-  stats: BaseStat[];
-  profession: Profession;
-  knownSkills: Skill[];
-  knownTalents: Talent[];
-  expansions: number[];
+  public name: string;
+  public race: Race;
+  public stats: BaseStat[];
+  public profession: Profession;
+  public knownSkills: Skill[];
+  public knownTalents: Talent[];
 }

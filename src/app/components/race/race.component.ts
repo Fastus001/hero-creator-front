@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../services/http.service';
 import {Race} from './race.model';
 import {FormControl, FormGroup} from '@angular/forms';
-import {Profession} from '../../domain/Profession';
+import {Profession} from '../../domain/profession';
+import {HeroService} from '../../services/hero.service';
 
 @Component({
   selector: 'app-race',
@@ -12,21 +13,19 @@ import {Profession} from '../../domain/Profession';
 export class RaceComponent implements OnInit {
   public races: Race[];
   public professions: Profession[];
+  public race: Race;
+  public profession: Profession;
 
   model: FormGroup = new FormGroup({
     raceForm: new FormControl(),
     sex: new FormControl()
   });
 
-  public race: Race;
-
-  public profession: Profession;
-
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService, private heroService: HeroService) { }
 
   ngOnInit(): void {
-    this.httpService.getRaces().subscribe((r) => {
-      this.races = r;
+    this.httpService.getRaces().subscribe((races) => {
+      this.races = races;
     });
   }
 
@@ -34,18 +33,21 @@ export class RaceComponent implements OnInit {
     this.race = race.value;
     const sex = this.model.controls.sex.value;
     if ( sex != null){
-      this.httpService.getProfessionsByLvlAndSex(1, sex, this.race.name).subscribe((p) => {
-        this.professions = p;
-      });
+      this.getProfessionsBy(sex, this.race.name);
     }
+    this.heroService.setRace(this.race);
   }
 
   onSexChange(): void {
     const sex = this.model.controls.sex.value;
     if ( this.race != null){
-      this.httpService.getProfessionsByLvlAndSex(1, sex, this.race.name).subscribe((p) => {
-        this.professions = p;
-      });
+      this.getProfessionsBy(sex, this.race.name);
     }
+  }
+
+  private getProfessionsBy(sex, name: string): void {
+    this.httpService.getProfessionsByLvlAndSex(1, sex, name).subscribe((professions) => {
+      this.professions = professions;
+    });
   }
 }
