@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Hero} from '../domain/hero.model';
-import {Race} from '../components/race/race.model';
 import {BaseStat} from '../domain/base-stat.model';
+import {Race} from '../components/chooser/race.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +14,12 @@ export class HeroService {
 
   public setRace(race: Race): void{
     this.hero.race = race;
-    console.log(this.hero);
-    for ( let i = 0; 10; i++){
-      console.log(new BaseStat(this.statNames[i], this.hero.race.stats[i], 0));
+    const statistics: BaseStat[] = [];
+    for ( let i = 0; i < this.statNames.length; i++){
+      statistics.push(new BaseStat(this.statNames[i], this.hero.race.stats[i], 0));
     }
+    this.hero.stats = statistics;
+    console.log(this.hero);
   }
 
 }

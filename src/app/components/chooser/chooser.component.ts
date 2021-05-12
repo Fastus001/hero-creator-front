@@ -6,11 +6,11 @@ import {Profession} from '../../domain/profession';
 import {HeroService} from '../../services/hero.service';
 
 @Component({
-  selector: 'app-race',
-  templateUrl: './race.component.html',
-  styleUrls: ['./race.component.css']
+  selector: 'app-choser',
+  templateUrl: './chooser.component.html',
+  styleUrls: ['./chooser.component.css']
 })
-export class RaceComponent implements OnInit {
+export class ChooserComponent implements OnInit {
   public races: Race[];
   public professions: Profession[];
   public race: Race;
@@ -49,5 +49,11 @@ export class RaceComponent implements OnInit {
     this.httpService.getProfessionsByLvlAndSex(1, sex, name).subscribe((professions) => {
       this.professions = professions;
     });
+  }
+
+
+  onChangeProfession(prof: {value: Profession}): void  {
+    this.profession = prof.value;
+    console.log(this.profession);
   }
 }

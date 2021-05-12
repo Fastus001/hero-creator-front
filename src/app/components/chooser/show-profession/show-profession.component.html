@@ -1,0 +1,27 @@
+<mat-card *ngIf="profession" class="example-card mat-elevation-z4">
+  <mat-card-content>
+    <mat-card-title>{{profession.name}}</mat-card-title>
+    <mat-card-subtitle>{{ profession.path }}</mat-card-subtitle>
+    <mat-card-subtitle>{{ profession.career }}</mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <mat-card-title>Dostępne umiejętności</mat-card-title>
+    <ng-container *ngFor="let skill of profession.skills">
+      <p>{{skill.name}} +({{ statNames[skill.statNumber] }}), </p>
+    </ng-container>
+    <mat-divider></mat-divider>
+    <mat-card-title>Dostępne talenty</mat-card-title>
+    <ng-container *ngFor="let talent of profession.talents">
+      <p>{{talent.name}}, </p>
+    </ng-container>
+    <mat-divider></mat-divider>
+    <mat-card-title> Cechy profesyjne</mat-card-title>
+    <ng-container *ngFor="let stat of profession.stats; let i=index">
+      <p> {{ statNames[stat] }}, </p>
+    </ng-container>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-title> Przedmioty:</mat-card-title>
+  <ng-container *ngFor="let item of profession.items; let i=index">
+    <p> {{ item }}, </p>
+  </ng-container>
+</mat-card>

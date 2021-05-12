@@ -1,8 +1,8 @@
-import {Race} from '../components/race/race.model';
 import {Profession} from './profession';
 import {Skill} from './skill';
 import {Talent} from './talent';
 import {BaseStat} from './base-stat.model';
+import {Race} from '../components/chooser/race.model';
 
 export class Hero {
   public name: string;

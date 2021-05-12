@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Profession} from '../domain/profession';
 import {tap} from 'rxjs/operators';
-import {Race} from '../components/race/race.model';
+import {Race} from '../components/chooser/race.model';
 
 @Injectable({
   providedIn: 'root'
