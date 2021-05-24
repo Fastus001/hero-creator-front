@@ -36,6 +36,7 @@ export class ChooserComponent implements OnInit {
       this.getProfessionsBy(sex, this.race.name);
     }
     this.heroService.setRace(this.race);
+    this.profession = null;
   }
 
   onSexChange(): void {
