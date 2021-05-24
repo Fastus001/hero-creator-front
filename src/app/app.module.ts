@@ -10,6 +10,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ShowRaceComponent} from './components/chooser/show-race/show-race.component';
 import {ShowProfessionComponent} from './components/chooser/show-profession/show-profession.component';
@@ -31,6 +32,7 @@ import {ShowProfessionComponent} from './components/chooser/show-profession/show
     MatButtonModule,
     MatCardModule,
     MatDividerModule,
+    MatGridListModule,
     FormsModule,
     ReactiveFormsModule
   ],

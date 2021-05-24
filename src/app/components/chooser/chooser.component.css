@@ -6,9 +6,8 @@ section {
   display: flex;
   align-items: flex-start;
 }
-
 button {
-  margin-top: 0.1em;
-  padding: 1.55em 1em;
-  line-height: 1.125;
+  margin-top: 3px;
+  width: 532px;
 }
+

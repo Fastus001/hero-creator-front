@@ -1,4 +1,5 @@
-<div *ngIf="races" class="">
+
+<div *ngIf="races" class="mat-div-script">
   <form [formGroup]="model">
     <mat-form-field appearance="fill">
       <mat-label>Wybierz rasę</mat-label>
@@ -27,8 +28,11 @@
     </mat-form-field>
   </form>
 </div>
-<app-show-race [race]="race"></app-show-race>
-<app-show-profession [profession]="profession"></app-show-profession>
-<button mat-raised-button *ngIf="profession && race">Wybierz</button>
+<div class="container">
+  <app-show-race [race]="race"></app-show-race>
+  <app-show-profession [profession]="profession"></app-show-profession>
+  <button mat-raised-button mat-align-tabs="center" *ngIf="profession && race" >Wybierz</button>
+</div>
+
 
 
