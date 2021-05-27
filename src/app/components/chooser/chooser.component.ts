@@ -52,9 +52,9 @@ export class ChooserComponent implements OnInit {
     });
   }
 
-
   onChangeProfession(prof: {value: Profession}): void  {
     this.profession = prof.value;
+    this.heroService.setProfession(this.profession);
     console.log(this.profession);
   }
 }

@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Hero} from '../domain/hero.model';
 import {BaseStat} from '../domain/base-stat.model';
 import {Race} from '../components/chooser/race.model';
+import {Profession} from '../domain/profession';
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +23,7 @@ export class HeroService {
     console.log(this.hero);
   }
 
+  setProfession(profession: Profession): void {
+    this.hero.profession = profession;
+  }
 }

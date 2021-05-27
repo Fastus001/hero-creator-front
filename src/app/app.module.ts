@@ -14,13 +14,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ShowRaceComponent} from './components/chooser/show-race/show-race.component';
 import {ShowProfessionComponent} from './components/chooser/show-profession/show-profession.component';
+import {HeroComponent} from './hero/hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChooserComponent,
     ShowRaceComponent,
-    ShowProfessionComponent
+    ShowProfessionComponent,
+    HeroComponent
 
   ],
   imports: [

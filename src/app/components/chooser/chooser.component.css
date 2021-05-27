@@ -11,3 +11,7 @@ button {
   width: 532px;
 }
 
+mat-card {
+  margin: auto;
+}
+
