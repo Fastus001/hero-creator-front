@@ -1,0 +1,9 @@
+<div class="container" >
+  <div>{{ stat.name }} </div>
+  <button mat-button (click)="subtractOne()"> {{ stat.stat }} </button>
+  <br>
+  <div>
+    {{ stat.expansion }}
+  </div>
+  <button mat-button (click)="addOne()"> {{ stat.stat+stat.expansion }} </button>
+</div>

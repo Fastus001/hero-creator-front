@@ -11,10 +11,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ShowRaceComponent} from './components/chooser/show-race/show-race.component';
 import {ShowProfessionComponent} from './components/chooser/show-profession/show-profession.component';
 import {HeroComponent} from './hero/hero.component';
+import {StatComponent} from './hero/stat/stat.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import {HeroComponent} from './hero/hero.component';
     ChooserComponent,
     ShowRaceComponent,
     ShowProfessionComponent,
-    HeroComponent
+    HeroComponent,
+    StatComponent
 
   ],
   imports: [
@@ -35,6 +39,8 @@ import {HeroComponent} from './hero/hero.component';
     MatCardModule,
     MatDividerModule,
     MatGridListModule,
+    MatInputModule,
+    MatIconModule,
     FormsModule,
     ReactiveFormsModule
   ],
