@@ -31,7 +31,8 @@
 <div class="container">
   <app-show-race [race]="race"></app-show-race>
   <app-show-profession [profession]="profession"></app-show-profession>
-  <button mat-raised-button mat-align-tabs="center" *ngIf="profession && race" >Wybierz</button>
+  <button mat-raised-button mat-align-tabs="center" *ngIf="profession && race"
+  (click)="createNewHeroStart()">Wybierz</button>
 </div>
 
 

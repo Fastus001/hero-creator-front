@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable, Output} from '@angular/core';
 import {Hero} from '../domain/hero.model';
 import {BaseStat} from '../domain/base-stat.model';
 import {Race} from '../components/chooser/race.model';
@@ -8,6 +8,8 @@ import {Profession} from '../domain/profession';
   providedIn: 'root'
 })
 export class HeroService {
+  @Output() newHero = new EventEmitter<Hero>();
+
   public statNames = ['WW', 'US', 'S', 'WT', 'I', 'ZW', 'ZR', 'INT', 'SW', 'OGD'];
   public hero: Hero = new Hero();
 

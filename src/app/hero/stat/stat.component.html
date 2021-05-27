@@ -1,9 +1,9 @@
-<div class="container" >
+<div *ngIf="stat">
   <div>{{ stat.name }} </div>
   <button mat-button (click)="subtractOne()"> {{ stat.stat }} </button>
   <br>
   <div>
     {{ stat.expansion }}
   </div>
-  <button mat-button (click)="addOne()"> {{ stat.stat+stat.expansion }} </button>
+  <button mat-button (click)="addOne()"> {{ sum() }} </button>
 </div>

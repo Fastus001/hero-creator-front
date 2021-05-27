@@ -57,4 +57,8 @@ export class ChooserComponent implements OnInit {
     this.heroService.setProfession(this.profession);
     console.log(this.profession);
   }
+
+  createNewHeroStart(): void {
+    this.heroService.newHero.emit(this.heroService.hero);
+  }
 }

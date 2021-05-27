@@ -1,2 +1,6 @@
-<p>hero works!</p>
-<app-stat></app-stat>
+<div *ngIf="hero">
+  <p>Hero stats!</p>
+  <div class="div-flex">
+    <app-stat *ngFor="let stat of hero.stats" [stat]="stat"></app-stat>
+  </div>
+</div>

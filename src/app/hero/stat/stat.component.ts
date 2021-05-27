@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {BaseStat} from '../../domain/base-stat.model';
 
 @Component({
@@ -8,7 +8,7 @@ import {BaseStat} from '../../domain/base-stat.model';
 })
 export class StatComponent implements OnInit {
 
-  stat: BaseStat = new BaseStat('WW', 25, 10);
+  @Input() stat: BaseStat;
 
   constructor() { }
 
@@ -23,5 +23,11 @@ export class StatComponent implements OnInit {
     if (this.stat.expansion > 0){
       this.stat.expansion--;
     }
+  }
+
+  sum(): number {
+    console.log(this.stat.stat);
+    console.log(this.stat.expansion);
+    return +this.stat.stat + +this.stat.expansion;
   }
 }
