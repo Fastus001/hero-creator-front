@@ -1,9 +1,15 @@
 <div *ngIf="stat">
   <div>{{ stat.name }} </div>
-  <button mat-button (click)="subtractOne()"> {{ stat.stat }} </button>
+  <button mat-button matBadge="-"
+          (mouseenter)="hiddenMinus=!hiddenMinus" (mouseleave)="hiddenMinus=!hiddenMinus"
+          [matBadgeHidden]="hiddenMinus"
+          (click)="subtractOne()"> {{ stat.stat }} </button>
   <br>
   <div>
     {{ stat.expansion }}
   </div>
-  <button mat-button (click)="addOne()"> {{ sum() }} </button>
+  <button mat-button matBadge="+"
+          (mouseenter)="hiddenPlus=!hiddenPlus" (mouseleave)="hiddenPlus=!hiddenPlus"
+          [matBadgeHidden]="hiddenPlus"
+          (click)="addOne()"> {{ sum() }} </button>
 </div>

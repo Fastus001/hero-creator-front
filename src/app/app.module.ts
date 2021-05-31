@@ -13,6 +13,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ShowRaceComponent} from './components/chooser/show-race/show-race.component';
 import {ShowProfessionComponent} from './components/chooser/show-profession/show-profession.component';
@@ -41,6 +42,7 @@ import {StatComponent} from './hero/stat/stat.component';
     MatGridListModule,
     MatInputModule,
     MatIconModule,
+    MatBadgeModule,
     FormsModule,
     ReactiveFormsModule
   ],

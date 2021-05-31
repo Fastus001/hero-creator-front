@@ -7,6 +7,8 @@ import {BaseStat} from '../../domain/base-stat.model';
   styleUrls: ['./stat.component.css']
 })
 export class StatComponent implements OnInit {
+  hiddenPlus = true;
+  hiddenMinus = true;
 
   @Input() stat: BaseStat;
 
