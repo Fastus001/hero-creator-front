@@ -19,7 +19,8 @@ export class HeroService {
     this.hero.race = race;
     const statistics: BaseStat[] = [];
     for ( let i = 0; i < this.statNames.length; i++){
-      statistics.push(new BaseStat(this.statNames[i], this.hero.race.stats[i], 0));
+      statistics.push( new BaseStat(this.statNames[i], +this.hero.race.stats[i] + this.getRandomStatValue(1, 20),
+          0));
     }
     this.hero.stats = statistics;
     console.log(this.hero);
@@ -27,5 +28,9 @@ export class HeroService {
 
   setProfession(profession: Profession): void {
     this.hero.profession = profession;
+  }
+
+  getRandomStatValue(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }

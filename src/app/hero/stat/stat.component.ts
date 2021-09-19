@@ -28,8 +28,6 @@ export class StatComponent implements OnInit {
   }
 
   sum(): number {
-    console.log(this.stat.stat);
-    console.log(this.stat.expansion);
     return +this.stat.stat + +this.stat.expansion;
   }
 }
